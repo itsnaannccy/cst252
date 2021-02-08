@@ -1,0 +1,36 @@
+/* In this CSS file, change the color and size of your heading.
+Change the indentation of the paragraph.
+Go back to the HTML and put a named div> around the heading and the paragraph.
+Style the div using an Id in your CS file. Put a dashed or dotted border around the div. */
+h1{
+  text-align:center;
+  color:Brown;
+  font-family: "Lucida Console", "Courier New", monospace;;
+  font-size: 50px;
+}
+
+p{
+  font-family: "times new roman";
+  text-indent: 20px;
+  margin-left: 10px;
+  font-size: 15px;
+  text-align:left;
+}
+
+div#content {
+  padding:20px;
+  margin:10px;
+  background-color: Seashell;
+  border: dotted 15px BurlyWood;
+}
+
+h2{
+  text-align:center;
+  font-family: "times new roman";
+  font-size: 30px;
+}
+
+body {
+  background-color:RosyBrown;
+  padding:40px;
+}
