@@ -1,0 +1,64 @@
+h1{
+  text-align:center;
+  color:LightSteelBlue;
+  font-family: 'Brygada 1918', serif;
+  font-size: 55px;
+}
+
+p{
+  font-family: 'Newsreader', serif;;
+  margin-left: 10px;
+  font-size: 18px;
+  text-align:left;
+}
+
+.carimg img {
+  float: right;
+  width: 400px;
+  height: auto;
+  padding: 5px;
+}
+
+div#content {
+  padding:30px;
+  margin: 15px;
+  background-color: Snow;
+  border: solid 15px SlateGray;
+}
+
+h2{
+  text-align:left;
+  font-family: 'Brygada 1918', serif;
+  font-size: 20px;
+}
+
+body {
+  background-color:LightSteelBlue;
+  padding:40px;
+  /* font-size: 30px; */
+}
+
+/* javascript output */
+.output{
+  margin:5px;
+  padding: 10px;
+  border: solid 1px black;
+}
+
+div{
+  display: block;
+}
+
+/* links */
+.homelink{
+  text-align: left;
+}
+
+.sourcelink{
+  float: right;
+}
+
+.nav{
+  padding: 10px;
+  font-size: 80%;
+}
