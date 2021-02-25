@@ -26,8 +26,8 @@
 }
 // Outside of the function, call the function and output the results with
 //document.writeln() to neatly output the user's sorted name.
-  document.writeln("Here is your new sorted username: " + sortName() + "</br");
-  document.writeln("Here is your new sorted name: " + revName + "</br>");
+document.writeln("Here is your new sorted username: " + sortName() + "</br");
+document.writeln("Here is your new sorted name: " + revName + "</br>");
 /******************************************************************************/
 /******************************************************************************/
 // Task X: Bonus #5
@@ -52,9 +52,11 @@
   }
   // variable called revName to call sortUserName function
     var revName = sortUserName(name);
-    // document.writeln("Here is your new name: "+ revName + "</br");
+    document.writeln("Here is your new name: "+ revName + "</br");
     //the document.writeln above wouln't show up on the webpage, when i moved it
     //above it showed up.
+
+
 
 /******************************************************************************/
 /******************************************************************************/
