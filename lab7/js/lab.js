@@ -9,7 +9,7 @@
 // Create a new function in your file, call it what you like, but choose wisely.
   function sortName() {
   // declare a variable userName and use window.prompt() to get the user's name from the user.
-    var userName = window.prompt("Please enter your user name:");
+    var userName = window.prompt("Please enter your username:");
     console.log("userName = ", userName);
   // Sort the letters of the user's name and return those from the function.
     //convert userName to an array
