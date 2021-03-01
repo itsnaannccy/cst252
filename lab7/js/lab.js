@@ -53,10 +53,5 @@ document.writeln("Here is your new sorted name: " + revName + "</br>");
   // variable called revName to call sortUserName function
     var revName = sortUserName(name);
     document.writeln("Here is your new name: "+ revName + "</br");
-    //the document.writeln above wouln't show up on the webpage, when i moved it
-    //above it showed up.
-
-
-
 /******************************************************************************/
 /******************************************************************************/
