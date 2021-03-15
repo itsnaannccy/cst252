@@ -23,7 +23,6 @@ p{
   min-height: 40px;
   border: solid 1px black;
   padding: 10px;
-  
 }
 
 div#content {
@@ -41,7 +40,7 @@ h2{
 }
 
 body {
-  background-image: linear-gradient(Brown, Maroon);
+  background-image: linear-gradient(MistyRose, PaleVioletRed);
   /* background-color:SeaGreen; */
   padding:40px;
   /* font-size: 30px; */
