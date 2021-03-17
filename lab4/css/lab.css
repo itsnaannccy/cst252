@@ -29,3 +29,28 @@ body {
   background-color:DarkSalmon;
   padding:40px;
 }
+
+/* javascript output */
+.output{
+  margin:5px;
+  padding: 10px;
+  border: solid 1px black;
+}
+
+div{
+  display: block;
+}
+
+/* links */
+.homelink{
+  text-align: left;
+}
+
+.sourcelink{
+  float: right;
+}
+
+.nav{
+  padding: 10px;
+  font-size: 80%;
+}

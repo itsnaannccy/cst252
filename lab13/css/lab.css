@@ -12,12 +12,12 @@ p{
   text-align:left;
 }
 
-/* .carimg img {
+.debug-img img {
   float: right;
   width: 400px;
   height: auto;
   padding: 5px;
-} */
+}
 
 .input-output {
   min-height: 40px;

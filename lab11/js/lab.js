@@ -37,6 +37,7 @@ buttonEl.addEventListener("click", function(){
     var house = sortingHat(name);
     // appends a new styled paragraph to #output that says "The Sorting Hat has
     // sorted you into " + house
+    debugger;
     document.getElementById("output").innerText = "The sorting Hat has sorted you into  " + house;
 })
 

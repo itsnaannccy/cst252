@@ -6,7 +6,7 @@
 
 /******************************************************************************/
 /******************************************************************************/
-setTimeout(function(){ alert("Hello"); }, 3000);
+//setTimeout(function(){ alert("Hello"); }, 3000);
 // Add your working code from your console experiment in your JS file
 // Use console.log() to print out your results.
 
@@ -28,5 +28,8 @@ setTimeout(function(){ alert("Hello"); }, 3000);
       return x += 2;// your new operation on x here
     })
     console.log("array after addition: ", add);
+
+    // var outputEl = document.getElementById("output");
+    // outputEl.innerHTML = mapResults; // put your results here
 /******************************************************************************/
 /******************************************************************************/

@@ -9,11 +9,11 @@
 // Create a new function in your file, call it what you like, but choose wisely.
   function sortName() {
   // declare a variable userName and use window.prompt() to get the user's name from the user.
-    var userName = window.prompt("Please enter your username:");
-    console.log("userName = ", userName);
+    var name = window.prompt("Please enter your name:");
+    console.log("userName = ", name);
   // Sort the letters of the user's name and return those from the function.
     //convert userName to an array
-    var nameArray = userName.split('');
+    var nameArray = name.split('');
     console.log("nameArray = ", nameArray);
     //reverse to array
     var sortNameArray = nameArray.sort();
@@ -26,15 +26,16 @@
 }
 // Outside of the function, call the function and output the results with
 //document.writeln() to neatly output the user's sorted name.
-document.writeln("Here is your new sorted username: " + sortName() + "</br");
-document.writeln("Here is your new sorted name: " + revName + "</br>");
+document.writeln("Here is your new sorted name: " + sortName() + "<br");
+debugger;
+document.writeln("Here is your new sorted last name: " + revName + "<br>");
 /******************************************************************************/
 /******************************************************************************/
 // Task X: Bonus #5
 // Can you make it so window.prompt() happens outside of your functions, then
 // pass the name as a parameter to the functions and return the result
-  var name = window.prompt("Please enter your name:");
-  console.log("name = ", name);
+  var lastName = window.prompt("Please enter your last name:");
+  console.log("name = ", lastName);
 
   function sortUserName(str) {
       //convert userName to an array
@@ -51,7 +52,7 @@ document.writeln("Here is your new sorted name: " + revName + "</br>");
       return newStr;
   }
   // variable called revName to call sortUserName function
-    var revName = sortUserName(name);
-    document.writeln("Here is your new name: "+ revName + "</br");
+    var revName = sortUserName(lastName);
+    document.writeln("Here is your new name: "+ revName + "<br");
 /******************************************************************************/
 /******************************************************************************/
