@@ -59,7 +59,7 @@
 /******************************************************************************/
 //Hangman Game:
 
-//pseeudocode from a previous lab:
+//pseudocode from a previous lab:
 
   //Come up with a word at random
   // Display the length of the word to the user
@@ -70,7 +70,7 @@
   // If the users incorrect_guesses are greater than 8, then the user has lost the game
   // If the users correct_guesses are equal to the length of the word, then the user has won the game
 
-//updated pseeudocode:
+//updated pseudocode:
 
   //initialize
     // create a list of words
