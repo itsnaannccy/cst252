@@ -1,7 +1,7 @@
 
 /*************************************************************************/
 img {
-    width: 400px;
+    width: 300px;
     height: auto;
 }
 
@@ -59,7 +59,18 @@ body {
   /* column-width: 100px; */
 }
 
-#output p {
+#output2 p {
+  margin: 10px;
+}
+
+#output{
+  margin:5px;
+  padding: 5px;
+  border: solid 1px black;
+  /* column-width: 100px; */
+}
+
+#output2 p {
   margin: 10px;
 }
 
