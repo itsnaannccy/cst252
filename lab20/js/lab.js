@@ -107,7 +107,7 @@
 // When you request an APOD, the $.ajax call will require a date for which you want a picture
 // Our prev and next buttons will use the date instead of num
 
-//1st attempt, used in the console and showed up on the webpage
+//1st attempt, used in the console and showed up on the webpage:)
 // $.ajax({
 //   url:"https://api.nasa.gov/planetary/apod"
 //   method:"GET",
@@ -125,7 +125,7 @@
 // })
 
 var URL = "https://api.nasa.gov/planetary/apod";
-  var URLpost = "info.0.json";
+var URLpost = "info.0.json";
 
 function make_safe(str) {
   return str.replace(/'/g, '&apos;').replace(/"/g, '&quot;');
@@ -158,25 +158,26 @@ function getImg(date) {
       console.log("orig title:", title);
       title = make_safe(title);
       console.log("safe title:", title);
-      var explanation = explanation.alt;
+      var explanation = data.explanation;
       console.log("orig alt:", alt);
       explanation = make_safe(alt);
       console.log("safe alt:", alt);
-      var dateNum = date.date;
+      var dateNum = data.date;
       var html = `<div id="imageblock">
           <h2>${title}</h2>
           <img src="${imageUrl}" title="${explanation}"><br>
-          <button id="prev">Previous</button><button id="next">Next</button>
+          <button id="prev2"> Previous </button>
+          <button id="next2">Next</button>
         </div>`
       // console.log("My new html: \n", html);
-      $("#output").html(html);
+      $("#output2").html(html);
 
       // add event listener to new prev button
-      $("#prev").click(function(){
+      $("#prev2").click(function(){
         getComic(dateNum - 1);
       });
       // add event listener to new next button
-      $("#next").click(function(){
+      $("#next2").click(function(){
         getComic(dateNum + 1);
       });
   })
