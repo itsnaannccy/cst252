@@ -59,11 +59,11 @@ body {
   /* column-width: 100px; */
 }
 
-#output2 p {
+#output p {
   margin: 10px;
 }
 
-#output{
+#output2{
   margin:5px;
   padding: 5px;
   border: solid 1px black;

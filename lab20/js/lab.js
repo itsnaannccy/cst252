@@ -159,9 +159,9 @@ function getImg(date) {
       title = make_safe(title);
       console.log("safe title:", title);
       var explanation = data.explanation;
-      console.log("orig alt:", alt);
-      explanation = make_safe(alt);
-      console.log("safe alt:", alt);
+      console.log("orig alt:", explanation);
+      explanation = make_safe(explanation);
+      console.log("safe alt:", explanation);
       var dateNum = data.date;
       var html = `<div id="imageblock">
           <h2>${title}</h2>
