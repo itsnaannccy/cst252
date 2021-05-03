@@ -111,24 +111,24 @@
 // When you request an APOD, the $.ajax call will require a date for which you want a picture
 // Our prev and next buttons will use the date instead of num
 
-var URL = "https://api.nasa.gov/planetary/apod"
-
-var URLpre = "https://apod.nasa.gov/apod/";
-var URLpost = "info.0.json";
-
-function make_safe(str) {
-  return str.replace(/'/g, '&apos;').replace(/"/g, '&quot;');
-}
-
-function getImg(date) {
-  if (typeof date === "undefined") {
-    dateStr = "";
-  } else {
-    dateStr = date.toString() + "/";
-  }
-
-  var theURL = URLpre + dateStr + URLpost;
-//   console.log("Our new URL:", ourURL);
+// var URL = "https://api.nasa.gov/planetary/apod"
+//
+// var URLpre = "https://apod.nasa.gov/apod/";
+// var URLpost = "info.0.json";
+//
+// function make_safe(str) {
+//   return str.replace(/'/g, '&apos;').replace(/"/g, '&quot;');
+// }
+//
+// function getImg(date) {
+//   if (typeof date === "undefined") {
+//     dateStr = "";
+//   } else {
+//     dateStr = date.toString() + "/";
+//   }
+//
+//   var theURL = URLpre + dateStr + URLpost;
+// //   console.log("Our new URL:", ourURL);
 
 $.ajax({
   url:"https://api.nasa.gov/planetary/apod",
@@ -183,6 +183,6 @@ $.ajax({
                     getImg(dateNum + 1);
                 });
        }
+     
   })
-}
- getImg();
+ // getImg();
