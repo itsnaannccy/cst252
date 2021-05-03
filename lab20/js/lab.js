@@ -67,15 +67,19 @@
         console.log("orig title:", title);
         title = make_safe(title);
         console.log("safe title:", title);
+
         var alt = data.alt;
         console.log("orig alt:", alt);
         alt = make_safe(alt);
         console.log("safe alt:", alt);
+
         var comicNum = data.num;
         var html = `<div id="imageblock">
             <h2>${title}</h2>
             <img src="${imageUrl}" title="${alt}"><br>
-            <button id="prev">Previous</button><button id="next">Next</button>
+            <p> ${alt}</p>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
           </div>`
         // console.log("My new html: \n", html);
         $("#output").html(html);
@@ -107,24 +111,9 @@
 // When you request an APOD, the $.ajax call will require a date for which you want a picture
 // Our prev and next buttons will use the date instead of num
 
-//1st attempt, used in the console and showed up on the webpage:)
-// $.ajax({
-//   url:"https://api.nasa.gov/planetary/apod"
-//   method:"GET",
-//   data: {
-//     api_key: "te4lBFjcxvfOjl8SS2YXJ1d3NtrVOV1XouXnFj7n"
-//     success: function(data){
-//       console.log(data);
-//            $("").html(data.title);
-//            var newImage = $("<img>");
-//            newImage.attr("src",data.img);
-//            $("#output").append(newImage);
-//            $("#output").html(data.alt);
-//     }
-//   }
-// })
+var URL = "https://api.nasa.gov/planetary/apod"
 
-var URL = "https://api.nasa.gov/planetary/apod";
+var URLpre = "https://apod.nasa.gov/apod/";
 var URLpost = "info.0.json";
 
 function make_safe(str) {
@@ -132,61 +121,68 @@ function make_safe(str) {
 }
 
 function getImg(date) {
-  if (typeof date === 'undefined') {
-    numStr = "";
+  if (typeof date === "undefined") {
+    dateStr = "";
   } else {
-    numStr = date.toString() + "/";
+    dateStr = date.toString() + "/";
   }
-  var ourURL = URLpre + numStr + URLpost;
-  console.log("Our new URL:", ourURL);
-  // get data via ajax from numbersapi
-  // Using the core $.ajax() method
-  $.ajax({
-      // The URL for the request (ENDPOINT)
-      url: ourURL,
-      // Whether this is a POST or GET request
-      type: "GET",
-  })
-  // If the request succeeds
-  .done(function(data) {
-      // console.log(data);
-      var imageUrl = data.url;
-      // we use .replace(/"/g, '\\"') after the text strings because
-      // sometimes there are single and double quotes in the text
-      // that confuses the html
-      var title = data.title;
-      console.log("orig title:", title);
-      title = make_safe(title);
-      console.log("safe title:", title);
-      var explanation = data.explanation;
-      console.log("orig alt:", explanation);
-      explanation = make_safe(explanation);
-      console.log("safe alt:", explanation);
-      var dateNum = data.date;
-      var html = `<div id="imageblock">
-          <h2>${title}</h2>
+
+  var theURL = URLpre + dateStr + URLpost;
+//   console.log("Our new URL:", ourURL);
+
+$.ajax({
+  url:"https://api.nasa.gov/planetary/apod",
+  //url:theURL,
+  method:"GET",
+  data: {
+    api_key: "te4lBFjcxvfOjl8SS2YXJ1d3NtrVOV1XouXnFj7n"
+  },
+    success: function(data){
+      console.log(data);
+          // $("#output2").html(data.title);
+          //  $("#output2").html(data.explanation);
+          //  var newImage = $("<img>");
+          //  newImage.attr("src",data.url);
+          //  newImage.addClass("bigpic");
+          //  $("#output2").append(newImage);
+
+          console.log(data);
+         var imageUrl = data.url;
+         // we use .replace(/"/g, '\\"') after the text strings because
+         // sometimes there are single and double quotes in the text
+         // that confuses the html
+         var title = data.title;
+          console.log("orig title:", title);
+         title = make_safe(title);
+          console.log("safe title:", title);
+
+         var explanation = data.explanation;
+          console.log("orig explanation:", explanation);
+         explanation = make_safe(explanation);
+          console.log("safe explanation:", explanation);
+
+        var dateNum = data.date;
+
+        var html = `<div id="imageblock">
+        <h2>${title}</h2>
           <img src="${imageUrl}" title="${explanation}"><br>
+          <p> ${explanation}</p>
           <button id="prev2"> Previous </button>
           <button id="next2">Next</button>
         </div>`
-      // console.log("My new html: \n", html);
-      $("#output2").html(html);
+                // console.log("My new html: \n", html);
+                $("#output2").html(html);
 
-      // add event listener to new prev button
-      $("#prev2").click(function(){
-        getComic(dateNum - 1);
-      });
-      // add event listener to new next button
-      $("#next2").click(function(){
-        getComic(dateNum + 1);
-      });
+                // add event listener to new prev button
+                $("#prev2").click(function(){
+                   getImg(dateNum - 1);
+                  //dateNum.setDate(dateNum.getDate() - 1);
+                });
+                // add event listener to new next button
+                $("#next2").click(function(){
+                    getImg(dateNum + 1);
+                });
+       }
   })
-  .fail(function(){
-    console.log("^^ Please ignore this error. It's okay.");
-    console.log("Have a okay day! :-)");
-  })
-
 }
-
-// start things off
-getImg();
+ getImg();
